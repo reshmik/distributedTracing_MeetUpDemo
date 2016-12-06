@@ -1,0 +1,11 @@
+instances: 1
+memory: 1G
+buildpack: java_buildpack
+services:
+  - rabbitmq_stream
+applications:
+- name: distTracingApp3
+  path: target/distTracingApp3-0.0.1-SNAPSHOT.jar
+  env:
+      SPRING_PROFILES_ACTIVE: cloud
+      SPRING_APPLICATION_NAME: distTracingApp3
